@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MERA Industrial & Construction Equipment Trade</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Index page specific styling */
+    .featured-products {
+      margin: 40px 0;
+      animation: fadeIn 1.5s;
+    }
+    
+    .product-item {
+      background: white;
+      border-radius: 8px;
+      padding: 25px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border-top: 4px solid #0077be;
+    }
+    
+    .product-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    
+    .product-icon {
+      width: 60px;
+      height: 60px;
+      background-color: #0077be;
+      border-radius: 50%;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+    
+    .intro-section {
+      text-align: center;
+      margin: 40px 0;
+      animation: fadeIn 1.5s;
+    }
+    
+    .cta-section {
+      background: linear-gradient(to right, #0077be, #005d93);
+      color: white;
+      padding: 40px;
+      text-align: center;
+      border-radius: 8px;
+      margin: 40px 0;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+      animation: fadeIn 1.5s;
+    }
+    
+    .cta-section h2 {
+      margin-top: 0;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      background-color: white;
+      color: #0077be;
+      padding: 12px 30px;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: transform 0.3s, background-color 0.3s;
+      margin-top: 20px;
+      min-height: 44px;
+      min-width: 44px;
+    }
+    
+    .cta-button:hover {
+      background-color: #f0f0f0;
+      transform: translateY(-3px);
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    /* Mobile Responsive Design */
+    @media screen and (max-width: 768px) {
+      .hero-section {
+        height: 350px;
+      }
+      
+      .hero-content h1 {
+        font-size: 2.5rem;
+      }
+      
+      .hero-content p {
+        font-size: 1.2rem;
+      }
+      
+      .cta-section {
+        padding: 30px 20px;
+      }
+    }
+    
+    @media screen and (max-width: 480px) {
+      .hero-section {
+        height: 300px;
+      }
+      
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+      
+      .hero-content p {
+        font-size: 1rem;
+      }
+      
+      .product-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+      }
+      
+      .cta-section {
+        padding: 25px 15px;
+      }
+    }
+  </style>
+  <script src="components/include.js"></script>
+</head>
+<body>
+  <div id="header-placeholder"></div>
+  
+  <div class="hero-section">
+    <div class="hero-content">
+      <h1>MERA</h1>
+      <p>Industrial & Construction Equipment Trade</p>
+      <p style="margin-top: 20px; font-size: 1.2rem;">Your trusted partner for all industrial material needs</p>
+    </div>
+  </div>
+  
+  <main>
+    <div class="intro-section">
+      <h2 style="color: #0077be; margin-bottom: 20px;">We Supply Different Types of Materials</h2>
+      <p style="max-width: 800px; margin: 0 auto; font-size: 1.1rem;">MERA provides high-quality industrial materials to businesses across various sectors. Our extensive inventory includes a wide range of products designed to meet your specific needs.</p>
+    </div>
+    
+    <div class="featured-products">
+      <h2 style="text-align: center; margin-bottom: 30px; color: #0077be;">Our Materials</h2>
+      <div class="products-grid">
+        <div class="product-item">
+          <div class="product-icon">V</div>
+          <h3>V-Belt</h3>
+          <p>High-quality V-Belts for industrial applications</p>
+        </div>
+        <div class="product-item">
+          <div class="product-icon">B</div>
+          <h3>Bearing</h3>
+          <p>Various types of industrial bearings</p>
+        </div>
+        <div class="product-item">
+          <div class="product-icon">M</div>
+          <h3>Mechanical Seal</h3>
+          <p>Premium mechanical seals for various applications</p>
+        </div>
+        <div class="product-item">
+          <div class="product-icon">P</div>
+          <h3>Pipehose</h3>
+          <p>Durable pipehoses for industrial use</p>
+        </div>
+        <div class="product-item">
+          <div class="product-icon">C</div>
+          <h3>Connector</h3>
+          <p>Various industrial connectors and fittings</p>
+        </div>
+        <div class="product-item">
+          <div class="product-icon">O</div>
+          <h3>Oil Seal</h3>
+          <p>Quality oil seals for mechanical equipment</p>
+        </div>
+        <div class="product-item">
+          <div class="product-icon">S</div>
+          <h3>Stainless Steel pipe and fitting</h3>
+          <p>Premium stainless steel pipes and fittings</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="cta-section">
+      <h2>Need Industrial Materials for Your Business?</h2>
+      <p>Contact us today to discuss how we can help you with high-quality industrial supplies</p>
+      <a href="contact.html" class="cta-button">Get in Touch</a>
+    </div>
+  </main>
+
+  <div id="footer-placeholder"></div>
+</body>
+</html>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Products – MERA Industrial & Construction Equipment Trade</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Products page specific styling */
+    .product-category {
+      margin-bottom: 40px;
+      animation: fadeIn 1.5s;
+    }
+    
+    .products-section {
+      margin-bottom: 60px;
+      animation: fadeIn 1.5s;
+    }
+    
+    .product-detail-card {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+      display: flex;
+      flex-direction: column;
+      border-top: 4px solid #0077be;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    
+    .product-detail-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    }
+    
+    .product-header {
+      padding: 20px;
+      background: #f9f9f9;
+      display: flex;
+      align-items: center;
+    }
+    
+    .product-icon-large {
+      width: 50px;
+      height: 50px;
+      background-color: #0077be;
+      border-radius: 50%;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      margin-right: 20px;
+      flex-shrink: 0;
+    }
+    
+    .product-content {
+      padding: 20px;
+    }
+    
+    .product-features {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 15px;
+    }
+    
+    .product-features li {
+      margin-bottom: 8px;
+      padding-left: 25px;
+      position: relative;
+    }
+    
+    .product-features li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #0077be;
+      font-weight: bold;
+    }
+    
+    .services-section {
+      background: white;
+      border-radius: 8px;
+      padding: 30px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      margin-top: 50px;
+      animation: fadeIn 1.8s;
+    }
+    
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+    
+    .service-card {
+      padding: 15px;
+      background: #f9f9f9;
+      border-left: 3px solid #0077be;
+      border-radius: 4px;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    /* Mobile Responsive Design */
+    @media screen and (max-width: 768px) {
+      .hero-section {
+        height: 250px;
+      }
+      
+      .hero-content h1 {
+        font-size: 2.5rem;
+      }
+      
+      .product-header {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .product-icon-large {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+      
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    @media screen and (max-width: 480px) {
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+      
+      .product-detail-card {
+        padding: 0;
+      }
+      
+      .product-content {
+        padding: 15px;
+      }
+    }
+  </style>
+  <script src="components/include.js"></script>
+</head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <div class="hero-section">
+    <div class="hero-content">
+      <h1>Our Products & Materials</h1>
+      <p>We Supply Different Types of High-Quality Industrial Materials</p>
+    </div>
+  </div>
+
+  <main>
+    <div class="products-section">
+      <h2 style="text-align: center; margin-bottom: 30px; color: #0077be;">Industrial Materials We Supply</h2>
+      
+      <!-- <div class="material-tags" style="justify-content: center; margin-bottom: 30px;">
+        <span class="material-tag">V-Belt</span>
+        <span class="material-tag">Bearing</span>
+        <span class="material-tag">Mechanical Seal</span>
+        <span class="material-tag">Pipehose</span>
+        <span class="material-tag">Connector</span>
+        <span class="material-tag">Oil Seal</span>
+        <span class="material-tag">Stainless Steel pipe and fitting</span>
+      </div> -->
+      
+      <div class="product-detail-card" id="v-belt">
+        <div class="product-header">
+          <div class="product-icon-large">V</div>
+          <h3>V-Belt</h3>
+        </div>
+        <div class="product-content">
+          <p>We offer a comprehensive range of V-Belts for all industrial applications. Our V-Belts are designed for optimal performance, durability, and efficiency in various machinery.</p>
+          <ul class="product-features">
+            <li>High tensile strength and durability</li>
+            <li>Excellent resistance to heat and oil</li>
+            <li>Reduced slippage and efficient power transmission</li>
+            <li>Available in various sizes and profiles</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="product-detail-card" id="bearing">
+        <div class="product-header">
+          <div class="product-icon-large">B</div>
+          <h3>Bearing</h3>
+        </div>
+        <div class="product-content">
+          <p>High-quality bearings in various sizes and specifications. We supply ball bearings, roller bearings, and specialized bearings for industrial machinery and equipment.</p>
+          <ul class="product-features">
+            <li>Precision engineered for smooth operation</li>
+            <li>High load capacity and extended service life</li>
+            <li>Available in standard and custom specifications</li>
+            <li>Suitable for various industrial applications</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="product-detail-card" id="mechanical-seal">
+        <div class="product-header">
+          <div class="product-icon-large">M</div>
+          <h3>Mechanical Seal</h3>
+        </div>
+        <div class="product-content">
+          <p>Our mechanical seals are engineered for reliability in demanding environments. We provide mechanical seals for pumps, mixers, and other rotating equipment.</p>
+          <ul class="product-features">
+            <li>Excellent leakage control</li>
+            <li>Compatible with various fluids and temperature conditions</li>
+            <li>Customizable for specific application requirements</li>
+            <li>Longer operational life and reduced maintenance</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="product-detail-card" id="pipehose">
+        <div class="product-header">
+          <div class="product-icon-large">P</div>
+          <h3>Pipehose</h3>
+        </div>
+        <div class="product-content">
+          <p>Industrial-grade pipehoses designed for various applications including high-pressure, chemical resistant, and temperature-resistant requirements.</p>
+          <ul class="product-features">
+            <li>Withstands high pressure and extreme temperatures</li>
+            <li>Chemical and abrasion-resistant options available</li>
+            <li>Flexible and durable construction</li>
+            <li>Available in various diameters and lengths</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="product-detail-card" id="connector">
+        <div class="product-header">
+          <div class="product-icon-large">C</div>
+          <h3>Connector</h3>
+        </div>
+        <div class="product-content">
+          <p>Wide range of industrial connectors for hydraulic, pneumatic, and electrical applications. Our connectors ensure secure and leak-free connections.</p>
+          <ul class="product-features">
+            <li>High-pressure and leak-free connections</li>
+            <li>Corrosion-resistant materials</li>
+            <li>Quick-connect and standard connection options</li>
+            <li>Compatible with various hose and pipe types</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="product-detail-card" id="oil-seal">
+        <div class="product-header">
+          <div class="product-icon-large">O</div>
+          <h3>Oil Seal</h3>
+        </div>
+        <div class="product-content">
+          <p>High-performance oil seals designed to prevent leakage and contamination in mechanical assemblies and hydraulic systems.</p>
+          <ul class="product-features">
+            <li>Superior sealing performance</li>
+            <li>Resistant to various oils, chemicals, and temperatures</li>
+            <li>Long service life and minimal maintenance</li>
+            <li>Available in standard and custom sizes</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="product-detail-card" id="stainless-steel-pipe-fitting">
+        <div class="product-header">
+          <div class="product-icon-large">S</div>
+          <h3>Stainless Steel pipe and fitting</h3>
+        </div>
+        <div class="product-content">
+          <p>Premium quality stainless steel pipes and fittings for construction, plumbing, and industrial applications. Corrosion-resistant and durable.</p>
+          <ul class="product-features">
+            <li>Superior corrosion and rust resistance</li>
+            <li>High-temperature and pressure tolerance</li>
+            <li>Hygienic and easy to maintain</li>
+            <li>Various grades and dimensions available</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="product-detail-card" id="any-industrial-spares">
+        <div class="product-header">
+          <div class="product-icon-large">A</div>
+          <h3>Any Industrial Spares</h3>
+        </div>
+        <div class="product-content">
+          <p>We also provide a wide range of other industrial spare parts and components to meet all your maintenance and operational needs.</p>
+          <ul class="product-features">
+            <li>Comprehensive inventory of industrial spares</li>
+            <li>Quality-tested components</li>
+            <li>Compatibility with various equipment brands</li>
+            <li>Custom sourcing for specialized requirements</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="services-section">
+      <h2 style="text-align: center; margin-bottom: 30px; color: #0077be;">Our Services</h2>
+      <p style="text-align: center;">In addition to supplying high-quality materials, we offer the following services to enhance your business operations:</p>
+      
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Custom Material Selection</h3>
+          <p>Expert consultation to help you select the right materials for your specific application needs.</p>
+        </div>
+        <div class="service-card">
+          <h3>Technical Support</h3>
+          <p>Professional guidance on product specifications, installation, and troubleshooting.</p>
+        </div>
+        <div class="service-card">
+          <h3>Express Delivery</h3>
+          <p>Fast and reliable delivery options to meet your urgent requirements.</p>
+        </div>
+        <div class="service-card">
+          <h3>Bulk Order Processing</h3>
+          <p>Efficient handling of large orders with competitive pricing and timely delivery.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <div id="footer-placeholder"></div>
+</body>
+</html>

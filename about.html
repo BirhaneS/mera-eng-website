@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us – MERA Industrial & Construction Equipment Trade</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* About page specific styling */
+    .about-section {
+      margin-bottom: 40px;
+      animation: fadeIn 1.5s;
+    }
+    
+    .about-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+    }
+    
+    .value-card {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border-top: 4px solid #0077be;
+    }
+    
+    .value-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    
+    .value-icon {
+      width: 60px;
+      height: 60px;
+      background-color: #0077be;
+      border-radius: 50%;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+    
+    .timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 40px auto;
+    }
+    
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      background-color: #0077be;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -3px;
+      border-radius: 3px;
+    }
+    
+    .timeline-item {
+      padding: 10px 30px;
+      position: relative;
+      background-color: inherit;
+      width: 50%;
+    }
+    
+    .timeline-item:nth-child(odd) {
+      left: 0;
+    }
+    
+    .timeline-item:nth-child(even) {
+      left: 50%;
+    }
+    
+    .timeline-content {
+      padding: 20px;
+      background-color: white;
+      position: relative;
+      border-radius: 6px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+    
+    .timeline-item:nth-child(odd) .timeline-content::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      right: -10px;
+      background-color: white;
+      border: 4px solid #0077be;
+      top: 22px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+    
+    .timeline-item:nth-child(even) .timeline-content::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      left: -10px;
+      background-color: white;
+      border: 4px solid #0077be;
+      top: 22px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+    
+    .team-section {
+      text-align: center;
+      margin: 60px 0;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    /* Make the about page responsive */
+    @media screen and (max-width: 768px) {
+      .hero-section {
+        height: 250px;
+      }
+      
+      .hero-content h1 {
+        font-size: 2.5rem;
+      }
+      
+      .hero-content p {
+        font-size: 1.2rem;
+      }
+      
+      .value-card {
+        padding: 15px;
+      }
+      
+      .timeline::after {
+        left: 31px;
+      }
+      
+      .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+      }
+      
+      .timeline-item:nth-child(even) {
+        left: 0;
+      }
+      
+      .timeline-item:nth-child(odd) .timeline-content::after,
+      .timeline-item:nth-child(even) .timeline-content::after {
+        left: -10px;
+      }
+    }
+    
+    @media screen and (max-width: 480px) {
+      .hero-section {
+        height: 220px;
+      }
+      
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+      
+      .hero-content p {
+        font-size: 1rem;
+      }
+      
+      .value-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+      }
+    }
+  </style>
+  <script src="components/include.js"></script>
+</head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <div class="hero-section">
+    <div class="hero-content">
+      <h1>About MERA</h1>
+      <p>Your Trusted Industrial Partner</p>
+    </div>
+  </div>
+
+  <main>
+    <div class="about-section">
+      <h2 style="text-align: center; margin-bottom: 30px; color: #0077be;">Our Story</h2>
+      <div class="product-card">
+        <p>
+          MERA Industrial & Construction Equipment Trade began with a simple mission: to provide businesses with reliable, high-quality industrial materials. Over the years, we've grown to become a leading supplier serving customers across various sectors.
+        </p>
+        <p>
+          We specialize in providing high-quality V-Belts, Bearings, Mechanical Seals, Pipehoses, Connectors, Oil Seals, and Stainless Steel pipes and fittings. Our commitment to quality and service has earned us the trust of businesses throughout the region.
+        </p>
+      </div>
+    </div>
+    
+    <div class="about-section">
+      <h2 style="text-align: center; margin-bottom: 30px; color: #0077be;">Our Journey</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h3>Our Beginning</h3>
+            <p>MERA was founded with a vision to provide quality industrial materials to businesses of all sizes.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h3>Expanding Our Products</h3>
+            <p>We expanded our inventory to include a wider range of industrial equipment and materials.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h3>Growing Partnerships</h3>
+            <p>We established strong partnerships with manufacturers and suppliers worldwide.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h3>Today</h3>
+            <p>MERA continues to grow, providing exceptional products and service to our valued customers.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="about-section">
+      <h2 style="text-align: center; margin-bottom: 30px; color: #0077be;">Our Core Values</h2>
+      <div class="about-grid">
+        <div class="value-card">
+          <div class="value-icon">Q</div>
+          <h3>Quality</h3>
+          <p>We only source and supply products that meet strict quality standards to ensure reliability and performance.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">R</div>
+          <h3>Reliability</h3>
+          <p>Our customers can count on us for consistent service and product availability when they need it most.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">E</div>
+          <h3>Expertise</h3>
+          <p>Our team has in-depth knowledge of industrial materials and applications to provide expert guidance.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">C</div>
+          <h3>Customer Focus</h3>
+          <p>We prioritize understanding and meeting our customers' unique needs with personalized service.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="about-section">
+      <h2 style="text-align: center; margin-bottom: 30px; color: #0077be;">Why Choose Us</h2>
+      <div class="product-card">
+        <ul style="list-style-type: none; padding-left: 0;">
+          <li style="margin-bottom: 15px; padding-left: 30px; position: relative;">
+            <span style="color: #0077be; position: absolute; left: 0; top: 0;">✓</span>
+            <strong>Extensive inventory</strong> of high-quality industrial materials
+          </li>
+          <li style="margin-bottom: 15px; padding-left: 30px; position: relative;">
+            <span style="color: #0077be; position: absolute; left: 0; top: 0;">✓</span>
+            <strong>Competitive pricing</strong> and bulk order discounts
+          </li>
+          <li style="margin-bottom: 15px; padding-left: 30px; position: relative;">
+            <span style="color: #0077be; position: absolute; left: 0; top: 0;">✓</span>
+            <strong>Expert technical advice</strong> and product selection assistance
+          </li>
+          <li style="margin-bottom: 15px; padding-left: 30px; position: relative;">
+            <span style="color: #0077be; position: absolute; left: 0; top: 0;">✓</span>
+            <strong>Fast delivery</strong> and reliable service
+          </li>
+          <li style="margin-bottom: 15px; padding-left: 30px; position: relative;">
+            <span style="color: #0077be; position: absolute; left: 0; top: 0;">✓</span>
+            <strong>Commitment</strong> to customer satisfaction
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+  
+  <div id="footer-placeholder"></div>
+</body>
+</html>
