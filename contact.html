@@ -144,6 +144,79 @@
     }
   </style>
   <script src="components/include.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('contact-form');
+      const formStatus = document.getElementById('form-status');
+      
+      if (form) {
+        form.addEventListener('submit', function(event) {
+          // Basic form validation
+          const name = document.getElementById('name').value.trim();
+          const email = document.getElementById('email').value.trim();
+          const subject = document.getElementById('subject').value.trim();
+          const message = document.getElementById('message').value.trim();
+          let valid = true;
+          
+          // Very simple validation - you can make this more sophisticated
+          if (name.length < 2) {
+            valid = false;
+            showFormError('Please enter your name');
+          } else if (!isValidEmail(email)) {
+            valid = false;
+            showFormError('Please enter a valid email address');
+          } else if (subject.length < 3) {
+            valid = false;
+            showFormError('Please enter a subject');
+          } else if (message.length < 10) {
+            valid = false;
+            showFormError('Please enter a message (at least 10 characters)');
+          }
+          
+          if (!valid) {
+            event.preventDefault();
+          } else {
+            showFormStatus('Sending your message...');
+            // Form will be submitted normally to FormSubmit
+          }
+        });
+      }
+      
+      // Helper functions
+      function isValidEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+      }
+      
+      function showFormError(message) {
+        formStatus.style.color = '#e74c3c';
+        formStatus.textContent = message;
+      }
+      
+      function showFormStatus(message) {
+        formStatus.style.color = '#0077be';
+        formStatus.textContent = message;
+      }
+    });
+    
+    function submitMailto() {
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const subject = document.getElementById('subject').value;
+      const message = document.getElementById('message').value;
+      
+      const mailtoLink = `mailto:info@mera-equipment.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + message)}`;
+      
+      window.location.href = mailtoLink;
+      
+      // Set a timeout to redirect to thank-you page after email client opens
+      setTimeout(function() {
+        window.location.href = 'thank-you.html'; // Using a relative path
+      }, 1000);
+      
+      return false; // Prevent default form submission
+    }
+  </script>
 </head>
 <body>
   <div id="header-placeholder"></div>
@@ -199,7 +272,7 @@
         
         <div class="contact-form-card">
           <h3 style="margin-top: 0; color: #0077be;">Send Us a Message</h3>
-          <form action="#" method="POST" class="contact-form">
+          <form id="contact-form" onsubmit="return submitMailto();">
             <div class="form-group">
               <label for="name">Name</label>
               <input type="text" id="name" name="name" required placeholder="Your name" />
@@ -216,6 +289,7 @@
               <label for="message">Message</label>
               <textarea id="message" name="message" required placeholder="Your message..."></textarea>
             </div>
+            <div id="form-status" style="margin-bottom: 15px; color: #0077be;"></div>
             <button type="submit" class="submit-button">Send Message</button>
           </form>
         </div>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thank You – MERA Industrial & Construction Equipment Trade</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .thank-you-container {
+      text-align: center;
+      padding: 60px 20px;
+      max-width: 600px;
+      margin: 0 auto;
+      animation: fadeIn 1.5s;
+    }
+    
+    .thank-you-icon {
+      width: 80px;
+      height: 80px;
+      background-color: #0077be;
+      border-radius: 50%;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+      margin: 0 auto 30px;
+    }
+    
+    .thank-you-message {
+      margin-bottom: 30px;
+    }
+    
+    .return-button {
+      display: inline-block;
+      background-color: #0077be;
+      color: white;
+      padding: 12px 30px;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: transform 0.3s, background-color 0.3s;
+      margin-top: 20px;
+    }
+    
+    .return-button:hover {
+      background-color: #005d93;
+      transform: translateY(-3px);
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+  <script src="components/include.js"></script>
+</head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <div class="hero-section">
+    <div class="hero-content">
+      <h1>Thank You</h1>
+      <p>Your message has been received</p>
+    </div>
+  </div>
+
+  <main>
+    <div class="thank-you-container">
+      <div class="thank-you-icon">✓</div>
+      <div class="thank-you-message">
+        <h2 style="color: #0077be;">Message Sent Successfully!</h2>
+        <p>Thank you for contacting MERA Industrial & Construction Equipment Trade. We have received your message and will get back to you as soon as possible.</p>
+        <p>Our team typically responds within 24-48 business hours.</p>
+      </div>
+      <a href="index.html" class="return-button">Return to Homepage</a>
+    </div>
+  </main>
+  
+  <div id="footer-placeholder"></div>
+</body>
+</html>
