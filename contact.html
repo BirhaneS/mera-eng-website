@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Us – MERA Industrial & Construction Equipment Trade</title>
+  <title>Contact Us – MERA Industrial, Chemical & Construction Equipment Trade</title>
   <link rel="stylesheet" href="style.css" />
   <style>
     /* Contact page specific styling */
@@ -126,6 +126,21 @@
       animation: fadeIn 1.8s;
     }
     
+    .address-display {
+      background-color: #f7f7f7;
+      padding: 30px;
+      border-radius: 4px;
+      border-left: 4px solid #0077be;
+      text-align: left;
+      margin-top: 20px;
+    }
+    
+    @media screen and (max-width: 768px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
@@ -135,13 +150,6 @@
       from { opacity: 0; transform: translateY(40px); }
       to { opacity: 1; transform: translateY(0); }
     }
-    
-    /* Make the contact page responsive */
-    @media screen and (max-width: 768px) {
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-    }
   </style>
   <script src="components/include.js"></script>
   <script>
@@ -149,6 +157,7 @@
       const form = document.getElementById('contact-form');
       const formStatus = document.getElementById('form-status');
       
+      // Form validation handler
       if (form) {
         form.addEventListener('submit', function(event) {
           // Basic form validation
@@ -177,7 +186,6 @@
             event.preventDefault();
           } else {
             showFormStatus('Sending your message...');
-            // Form will be submitted normally to FormSubmit
           }
         });
       }
@@ -205,13 +213,13 @@
       const subject = document.getElementById('subject').value;
       const message = document.getElementById('message').value;
       
-      const mailtoLink = `mailto:info@mera-equipment.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + message)}`;
+      const mailtoLink = `mailto:addisseid@mera-trading.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + message)}`;
       
       window.location.href = mailtoLink;
       
       // Set a timeout to redirect to thank-you page after email client opens
       setTimeout(function() {
-        window.location.href = 'thank-you.html'; // Using a relative path
+        window.location.href = 'thank-you.html';
       }, 1000);
       
       return false; // Prevent default form submission
@@ -241,7 +249,7 @@
             <div class="contact-icon">E</div>
             <div>
               <h4 style="margin-top: 0;">Email</h4>
-              <p><a href="mailto:info@mera-equipment.com" style="color: #0077be; text-decoration: none;">info@mera-equipment.com</a></p>
+              <p><a href="mailto:addisseid@mera-trading.com" style="color: #0077be; text-decoration: none;">addisseid@mera-trading.com</a></p>
             </div>
           </div>
           
@@ -249,7 +257,8 @@
             <div class="contact-icon">P</div>
             <div>
               <h4 style="margin-top: 0;">Phone</h4>
-              <p>+251-XX-XXXXXXX</p>
+              <p>+251-913037379</p>
+              <p>+251-911089367</p>
             </div>
           </div>
           
@@ -257,7 +266,8 @@
             <div class="contact-icon">A</div>
             <div>
               <h4 style="margin-top: 0;">Address</h4>
-              <p>Industrial Area, Ethiopia</p>
+              <p>Mekonnen Bitew Building, W-09</p>
+              <p>Addis Ababa, Ethiopia</p>
             </div>
           </div>
           
@@ -298,9 +308,11 @@
     
     <div class="map-section">
       <h3 style="color: #0077be; margin-top: 0;">Visit Our Location</h3>
-      <p style="margin-bottom: 20px;">Find us at the heart of the industrial district</p>
-      <div style="background-color: #f0f0f0; height: 300px; display: flex; align-items: center; justify-content: center; border-radius: 4px;">
-        <p>Map placeholder - Google Maps integration would go here</p>
+      <div class="address-display">
+        <strong>MERA Industrial, Chemical & Construction Equipment Trade</strong><br>
+        Mekonnen Bitew Building, W-09<br>
+        Addis Ababa, Ethiopia<br><br>
+        <a href="https://www.google.com/maps/search/?api=1&query=Mekonnen%20Bitew%20Building%2C%20W-09%2C%20Addis%20Ababa%2C%20Ethiopia" target="_blank" style="color: #0077be; text-decoration: none;">View on Google Maps</a>
       </div>
     </div>
   </main>

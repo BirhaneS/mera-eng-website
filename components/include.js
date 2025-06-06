@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 <img src="m.JPG" alt="MERA Logo">
                 <span class="nav-logo-text">ERA</span>
               </a>
-              <span class="nav-tagline">Industrial & Construction Equipment Trade</span>
+              <span class="nav-tagline">Industrial, Chemical & Construction Equipment Trade</span>
               <ul class="nav">
                 <li><a href="index.html" id="nav-home">Home</a></li>
                 <li><a href="about.html" id="nav-about">About Us</a></li>
@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // Fallback footer content if loading fails
         footerElement.innerHTML = `
           <footer>
-            <p>© 2025 MERA Industrial & Construction Equipment Trade</p>
+            <p>© 2025 MERA Industrial, Chemical & Construction Equipment Trade</p>
             <p>Your trusted partner for industrial materials and equipment</p>
           </footer>
         `;
