@@ -1,4 +1,12 @@
 document.addEventListener("DOMContentLoaded", function() {
+  // Set the footer copyright year to the current year
+  function setCopyrightYear() {
+    const yearSpan = document.getElementById("copyright-year");
+    if (yearSpan) {
+      yearSpan.textContent = new Date().getFullYear();
+    }
+  }
+
   // Load header component
   const headerElement = document.querySelector("#header-placeholder");
   if (headerElement) {
@@ -73,16 +81,18 @@ document.addEventListener("DOMContentLoaded", function() {
       })
       .then(data => {
         footerElement.innerHTML = data;
+        setCopyrightYear();
       })
       .catch(error => {
         console.error('Error loading footer:', error);
         // Fallback footer content if loading fails
         footerElement.innerHTML = `
           <footer>
-            <p>© 2025 MERA Industrial, Chemical & Construction Equipment Trade</p>
+            <p>© <span id="copyright-year"></span> MERA Industrial, Chemical & Construction Equipment Trade</p>
             <p>Your trusted partner for industrial materials and equipment</p>
           </footer>
         `;
+        setCopyrightYear();
       });
   }
 });
