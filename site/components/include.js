@@ -22,25 +22,14 @@ document.addEventListener("DOMContentLoaded", function() {
         // Insert the header HTML
         headerElement.innerHTML = data;
         
-        // Set active class for current page
-        const currentPage = window.location.pathname.split("/").pop();
-        let navId = "";
-        
-        if (currentPage === "index.html" || currentPage === "" || currentPage === "/") {
-          navId = "nav-home";
-        } else if (currentPage === "about.html") {
-          navId = "nav-about";
-        } else if (currentPage === "products.html") {
-          navId = "nav-products";
-        } else if (currentPage === "contact.html") {
-          navId = "nav-contact";
+        // Set active class for current page (handles both /about and /about.html)
+        let page = window.location.pathname.split("/").pop().replace(/\.html$/, "");
+        if (page === "" || page === "index") {
+          page = "home";
         }
-        
-        if (navId) {
-          const activeNavItem = document.getElementById(navId);
-          if (activeNavItem) {
-            activeNavItem.classList.add("active");
-          }
+        const activeNavItem = document.getElementById("nav-" + page);
+        if (activeNavItem) {
+          activeNavItem.classList.add("active");
         }
         
         // Check if navigation loaded correctly
