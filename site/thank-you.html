@@ -4,6 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Thank You – MERA Industrial, Chemical & Construction Equipment Trade</title>
+  <meta name="description" content="Thank you for contacting MERA Industrial, Chemical & Construction Equipment Trade. We've received your message and will respond within 24-48 business hours." />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href="https://mera-trading.com/thank-you" />
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/jpeg" href="m.JPG" />
   <style>
@@ -54,10 +57,23 @@
       to { opacity: 1; transform: translateY(0); }
     }
   </style>
-  <script src="components/include.js"></script>
 </head>
 <body>
-  <div id="header-placeholder"></div>
+  <nav>
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <img src="m.JPG" alt="MERA Logo">
+        <span class="nav-logo-text">ERA</span>
+      </a>
+      <span class="nav-tagline">Industrial, Chemical & Construction Equipment Trade</span>
+      <ul class="nav">
+        <li><a href="/" id="nav-home">Home</a></li>
+        <li><a href="/about" id="nav-about">About Us</a></li>
+        <li><a href="/products" id="nav-products">Products</a></li>
+        <li><a href="/contact" id="nav-contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
   <div class="hero-section">
     <div class="hero-content">
@@ -74,10 +90,14 @@
         <p>Thank you for contacting MERA Industrial, Chemical & Construction Equipment Trade. We have received your message and will get back to you as soon as possible.</p>
         <p>Our team typically responds within 24-48 business hours.</p>
       </div>
-      <a href="index.html" class="return-button">Return to Homepage</a>
+      <a href="/" class="return-button">Return to Homepage</a>
     </div>
   </main>
-  
-  <div id="footer-placeholder"></div>
+
+  <footer>
+    <p>© <span id="copyright-year"></span> MERA Industrial, Chemical & Construction Equipment Trade</p>
+    <p>Your trusted partner for industrial materials and equipment</p>
+  </footer>
+  <script>document.getElementById('copyright-year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
