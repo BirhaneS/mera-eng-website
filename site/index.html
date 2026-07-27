@@ -3,9 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>MERA Industrial, Chemical & Construction Equipment Trade</title>
+  <title>MERA Industrial, Chemical & Construction Equipment Trade | Addis Ababa, Ethiopia</title>
+  <meta name="description" content="MERA supplies industrial chemicals, V-belts, bearings, mechanical seals, pipehoses, connectors, oil seals, and stainless steel pipe & fittings to businesses in Addis Ababa, Ethiopia." />
+  <link rel="canonical" href="https://mera-trading.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="MERA Industrial, Chemical & Construction Equipment Trade" />
+  <meta property="og:title" content="MERA Industrial, Chemical & Construction Equipment Trade" />
+  <meta property="og:description" content="MERA supplies industrial chemicals, V-belts, bearings, mechanical seals, pipehoses, connectors, oil seals, and stainless steel pipe & fittings to businesses in Addis Ababa, Ethiopia." />
+  <meta property="og:url" content="https://mera-trading.com/" />
+  <meta property="og:image" content="https://mera-trading.com/header_footer.JPG" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="MERA Industrial, Chemical & Construction Equipment Trade" />
+  <meta name="twitter:description" content="MERA supplies industrial chemicals, V-belts, bearings, mechanical seals, pipehoses, connectors, oil seals, and stainless steel pipe & fittings to businesses in Addis Ababa, Ethiopia." />
+  <meta name="twitter:image" content="https://mera-trading.com/header_footer.JPG" />
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/jpeg" href="m.JPG" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "MERA Industrial, Chemical & Construction Equipment Trade",
+    "image": "https://mera-trading.com/header_footer.JPG",
+    "url": "https://mera-trading.com/",
+    "telephone": "+251-913037379",
+    "email": "addisseid@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Mekonnen Bitew Building, W-09",
+      "addressLocality": "Addis Ababa",
+      "addressCountry": "ET"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "18:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Saturday"],
+        "opens": "09:00",
+        "closes": "14:00"
+      }
+    ]
+  }
+  </script>
   <style>
     /* Index page specific styling */
     .featured-products {
@@ -137,11 +180,24 @@
       }
     }
   </style>
-  <script src="components/include.js"></script>
 </head>
 <body>
-  <div id="header-placeholder"></div>
-  
+  <nav>
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <img src="m.JPG" alt="MERA Logo">
+        <span class="nav-logo-text">ERA</span>
+      </a>
+      <span class="nav-tagline">Industrial, Chemical & Construction Equipment Trade</span>
+      <ul class="nav">
+        <li><a href="/" id="nav-home" class="active">Home</a></li>
+        <li><a href="/about" id="nav-about">About Us</a></li>
+        <li><a href="/products" id="nav-products">Products</a></li>
+        <li><a href="/contact" id="nav-contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
   <div class="hero-section">
     <div class="hero-content">
       <h1>MERA</h1>
@@ -215,10 +271,14 @@
     <div class="cta-section">
       <h2>Need Industrial Materials for Your Business?</h2>
       <p>Contact us today to discuss how we can help you with high-quality industrial supplies</p>
-      <a href="contact.html" class="cta-button">Get in Touch</a>
+      <a href="/contact" class="cta-button">Get in Touch</a>
     </div>
   </main>
 
-  <div id="footer-placeholder"></div>
+  <footer>
+    <p>© <span id="copyright-year"></span> MERA Industrial, Chemical & Construction Equipment Trade</p>
+    <p>Your trusted partner for industrial materials and equipment</p>
+  </footer>
+  <script>document.getElementById('copyright-year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
